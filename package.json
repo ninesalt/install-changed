@@ -1,6 +1,6 @@
 {
   "name": "install-changed",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Only npm installs if package.json has been modified",
   "main": "index.js",
   "scripts": {

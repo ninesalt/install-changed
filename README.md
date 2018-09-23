@@ -19,8 +19,9 @@ You can use it as follows. In your `package.json`, add a new script to run:
   You can also do this programatically:
 
 ```
-let watcher = require('install-changed')
-let modified = watcher()  
+let installChanged = require('install-changed')
+
+let isModified = installChanged.watchPackage()  
 ```
 
 The function above does exactly the same thing, additonally it also returns a boolean value which you might find useful.
