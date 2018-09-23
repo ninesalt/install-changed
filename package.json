@@ -1,0 +1,29 @@
+{
+  "name": "install-changed",
+  "version": "1.0.6",
+  "description": "Only npm installs if package.json has been modified",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "install-changed": "./bin/install-changed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ninesalt/install-changed.git"
+  },
+  "author": "Youssef Swailem <youssefswailem@gmail.com>(http://github.com/ninesalt)",
+  "license": "ISC",
+  "keywords": [
+    "npm",
+    "install",
+    "install-modified",
+    "install-changed",
+    "install-changes",
+    "modified",
+    "changed",
+    "changes",
+    "package"
+  ]
+}
