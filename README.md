@@ -19,9 +19,40 @@ You can use it as follows. In your `package.json`, add a new script to run:
   You can also do this programatically:
 
 ```
-let installChanged = require('install-changed')
+const installChanged = require('install-changed')
 
-let isModified = installChanged.watchPackage()  
+const isModified = installChanged.watchPackage()
 ```
 
 The function above does exactly the same thing, additonally it also returns a boolean value which you might find useful.
+
+### Options
+
+**CLI**
+
+install-changed --help
+```
+Usage: install-changed [options]
+
+Options:
+  --install-command [command]  The command to run when dependencies need to be installed/updated
+  --hash-filename [filename]   Filename where hash of dependencies will be written to
+  -h, --help                   display help for command
+```
+
+Example
+```
+install-changed --hash-filename .packagehash --install-command "npm ci"
+```
+This will use the file `.packagehash` to store a hash of the installed dependencies and run `npm ci` instead of `npm install` when packages need to be installed / updated.
+
+**Programatically**
+
+```
+const installChanged = require('install-changed')
+
+const isModified = installChanged.watchPackage({
+  hashFilename: '.packagehash',
+  installCommand: 'npm ci'
+})
+```
