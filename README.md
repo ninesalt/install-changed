@@ -37,6 +37,7 @@ Usage: install-changed [options]
 Options:
   --install-command [command]  The command to run when dependencies need to be installed/updated
   --hash-filename [filename]   Filename where hash of dependencies will be written to
+  -u, --update-only            Only update the hash
   -h, --help                   display help for command
 ```
 
@@ -45,6 +46,8 @@ Example
 install-changed --hash-filename .packagehash --install-command "npm ci"
 ```
 This will use the file `.packagehash` to store a hash of the installed dependencies and run `npm ci` instead of `npm install` when packages need to be installed / updated.
+
+There may be some cases you just only want to update the hash. For example, when you are installing a new package you don't want the script to install the package again later. You can use the `---update-only` for that.
 
 **Programatically**
 
