@@ -37,7 +37,7 @@ Usage: install-changed [options]
 Options:
   --install-command [command]  The command to run when dependencies need to be installed/updated
   --hash-filename [filename]   Filename where hash of dependencies will be written to
-  -u, --hash-only            Only update the hash
+  --hash-only                  Only update the hash
   -h, --help                   display help for command
 ```
 
