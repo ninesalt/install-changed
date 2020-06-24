@@ -16,15 +16,17 @@ You can use it as follows. In your `package.json`, add a new script to run:
   ```
   Then when you run `npm run pre-run` it will automatically figure out what needs to happen.
 
-  You can also do this programatically:
+
+**Programatically**
 
 ```
 const installChanged = require('install-changed')
 
-const isModified = installChanged.watchPackage()
+const isModified = installChanged.watchPackage({
+  hashFilename: '.packagehash',
+  installCommand: 'npm ci'
+})
 ```
-
-The function above does exactly the same thing, additonally it also returns a boolean value which you might find useful.
 
 ### Options
 
@@ -48,14 +50,3 @@ install-changed --hash-filename .packagehash --install-command "npm ci"
 This will use the file `.packagehash` to store a hash of the installed dependencies and run `npm ci` instead of `npm install` when packages need to be installed / updated.
 
 There may be some cases you just only want to update the hash. For example, when you are installing a new package you don't want the script to install the package again later. You can use the `---hash-only` for that.
-
-**Programatically**
-
-```
-const installChanged = require('install-changed')
-
-const isModified = installChanged.watchPackage({
-  hashFilename: '.packagehash',
-  installCommand: 'npm ci'
-})
-```
