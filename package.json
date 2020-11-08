@@ -36,6 +36,7 @@
     "eslint-plugin-standard": "^4.0.0"
   },
   "dependencies": {
-    "commander": "^5.1.0"
+    "commander": "^5.1.0",
+    "package-changed": "^1.2.1"
   }
 }
