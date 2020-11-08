@@ -37,6 +37,6 @@
   },
   "dependencies": {
     "commander": "^5.1.0",
-    "package-changed": "^1.0.2"
+    "package-changed": "^1.2.1"
   }
 }
